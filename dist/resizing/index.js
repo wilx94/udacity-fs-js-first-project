@@ -49,6 +49,9 @@ var resize = function (filename, width, height) { return __awaiter(void 0, void 
                 if (!filename || !width || !height) {
                     throw new Error('Must provide values for filename, width and height');
                 }
+                if (width < 0 || height < 0) {
+                    throw new Error('Values provided for width and height must be positive numbers');
+                }
                 imagePath = "./assets/images/full/" + filename + ".jpg";
                 return [4 /*yield*/, fs_1.promises.readdir('./assets/images/thumb/')];
             case 1:

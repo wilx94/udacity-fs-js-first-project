@@ -85,3 +85,16 @@ it('throws an error when a parameter is not provided', function () { return __aw
         }
     });
 }); });
+it('throws an error if width or height is a negative number', function () { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, expectAsync((0, resizing_1.default)('blue', -100, 100)).toBeRejectedWith(new Error('Values provided for width and height must be positive numbers'))];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, expectAsync((0, resizing_1.default)('blue', 100, -200)).toBeRejectedWith(new Error('Values provided for width and height must be positive numbers'))];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });

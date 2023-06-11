@@ -24,9 +24,7 @@ routes.get('/', async (req, res) => {
     status = 500;
   }
 
-  console.log({response, status})
-
-  res.send(response).status(status);
+  res.status(status).send(response);
 });
 
 export default routes;

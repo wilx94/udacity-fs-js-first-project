@@ -68,8 +68,7 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 status = 500;
                 return [3 /*break*/, 4];
             case 4:
-                console.log({ response: response, status: status });
-                res.send(response).status(status);
+                res.status(status).send(response);
                 return [2 /*return*/];
         }
     });

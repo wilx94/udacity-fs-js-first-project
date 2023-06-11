@@ -27,3 +27,12 @@ it('throws an error when a parameter is not provided', async () => {
     new Error('Must provide values for filename, width and height')
   );
 });
+
+it('throws an error if width or height is a negative number', async () => {
+  await expectAsync(resize('blue', -100, 100)).toBeRejectedWith(
+    new Error('Values provided for width and height must be positive numbers')
+  );
+  await expectAsync(resize('blue', 100, -200)).toBeRejectedWith(
+    new Error('Values provided for width and height must be positive numbers')
+  );
+});

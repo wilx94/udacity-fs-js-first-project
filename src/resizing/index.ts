@@ -9,6 +9,13 @@ const resize = async (
   if (!filename || !width || !height) {
     throw new Error('Must provide values for filename, width and height');
   }
+
+  if (width < 0 || height < 0) {
+    throw new Error(
+      'Values provided for width and height must be positive numbers'
+    );
+  }
+
   const imagePath = `./assets/images/full/${filename}.jpg`;
   const thumbFiles = await fsPromises.readdir('./assets/images/thumb/');
   const exist = thumbFiles.filter(
