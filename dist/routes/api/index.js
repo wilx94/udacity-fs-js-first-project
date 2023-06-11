@@ -52,7 +52,6 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 filename = (_a = req.query.filename) === null || _a === void 0 ? void 0 : _a.toString();
                 width = parseInt(req.query.width);
                 height = parseInt(req.query.height);
-                response = "<div><img src=\"" + imagePath + "\" style=\"max-width: 100%;\"></div>";
                 status = 200;
                 _b.label = 1;
             case 1:
@@ -61,6 +60,7 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
             case 2:
                 _b.sent();
                 imagePath = "./images/thumb/" + filename + "_" + width + "_" + height + ".jpg";
+                response = "<div><img src=\"" + imagePath + "\" style=\"max-width: 100%;\"></div>";
                 return [3 /*break*/, 4];
             case 3:
                 error_1 = _b.sent();

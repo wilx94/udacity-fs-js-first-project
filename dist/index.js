@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var index_1 = __importDefault(require("./routes/api/index"));
 var app = (0, express_1.default)();
-var port = 5000;
+var port = 3000;
 app.use(express_1.default.static('assets'));
 app.use('/api', index_1.default);
 app.get('/test', function (req, res) {

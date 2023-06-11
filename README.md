@@ -24,11 +24,11 @@ http://localhost:5000/api
 - height: pixel values as a number greater than 0
 
 ### Examples
-- http://localhost:5000/api?filename=encenadaport&width=200&height=300
+- http://localhost:3000/api?filename=encenadaport&width=200&height=300
 Will display the encenadaport image resized having width=200 and height=300
-- http://localhost:3000/api/images?filename=encenadaport&width=-200&height=200
+- http://localhost:3000/api?filename=encenadaport&width=-200&height=200
 Error telling that need to provide a positive value for width and height parameters
-- http://localhost:3000/api/images?filename=encenadaport
+- http://localhost:3000/api?filename=encenadaport
 Show an error that shows all parameters that needs to be provided
 
 ### Notes
